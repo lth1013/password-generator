@@ -22,15 +22,15 @@ function generatePassword() {
   var addLength = prompt("Select a number between 8 and 128. This will be the number of characters for your password.")
 
   //We need an error message if they don't select a number between 8 and 128.
-  if (addLength < 8) {
+  while (addLength < 8) {
     alert("You did not select a number that fits the criteria. Please reselect.");
     var addLength = prompt("Select a number between 8 and 128. This will be the number of characters for your password.")
   }
-  else if (addLength > 128) {
+  while (addLength > 128) {
     alert("You did not select a number that fits the criteria. Please reselect.");
     var addLength = prompt("Select a number between 8 and 128. This will be the number of characters for your password.")
   }
-  else {
+    {
     alert("You have chosen a password of " + addLength + " characters.");
   }
 
@@ -39,6 +39,18 @@ var confirmUpper = confirm("Would you like uppercase letters to be included in y
 var confirmLower = confirm("Would you like lowercase letters to be included in your password?"); 
 var confirmNumbers = confirm("Would you like numbers to be included in your password?"); 
 var confirmSpecial = confirm("Would you like special characters to be included in your password?");
+
+  while (
+    confirmUpper === false &&
+    confirmLower === false &&
+    confirmNumbers === false &&
+    confirmSpecial === false) {
+        alert("You need to pick some characters so a password can be generaterd."); 
+        var confirmUpper = confirm("Would you like uppercase letters to be included in your password?"); 
+        var confirmLower = confirm("Would you like lowercase letters to be included in your password?"); 
+        var confirmNumbers = confirm("Would you like numbers to be included in your password?");
+        var confirmSpecial = confirm("Would you like special characters to be included in your password?"); 
+    }
 
 //if upper/lower/number/special selected, we concat it to the empty firstPassword array
 var firstPassword = []
