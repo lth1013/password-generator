@@ -10,7 +10,7 @@
 
 ## Description 
 
-[Visit the Deployed Site](https://youtu.be/BFyeuLhjcPY)
+[Visit the Deployed Site](https://lth1013.github.io/password-generator/)
 
 This purpose of this project was to create a random password generator in JavaScript. This website will create strong, randomized passwords that will increase the security of the employees who use it. 
 
