@@ -30,6 +30,26 @@ function passwordLength() {
 }
 passwordLength()
 
+//creating variables to hold value of window.confirm ok/cancel
+var confirmUpper = window.confirm("Would you like uppercase letters to be included in your password?"); 
+var confirmLower = window.confirm("Would you like lowercase letters to be included in your password?"); 
+var confirmNumbers = window.confirm("Would you like numbers to be included in your password?"); 
+var confirmSpecial = window.confirm("Would you like special characters to be included in your password?");
+
+//if upper/lower/number/special selected, we concat it to the empty firstPassword array
+var firstPassword = []
+  if (confirmUpper) {
+    firstPassword = firstPassword.concat(upperCase)
+  }
+  if (confirmLower) {
+    firstPassword = firstPassword.concat(lowercase)
+  }
+  if (confirmNumbers) {
+    firstPassword = firstPassword.concat(numbers)
+  }
+  if (confirmSpecial) {
+    firstPassword = firstPassword.concast(special)
+  }
 
 // Write password to the #password input
 function writePassword() {
