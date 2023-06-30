@@ -12,7 +12,7 @@ var special = ['"', "!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", 
 
 //User chooses how long they want their password to be
 
-function passwordLength() {
+function generatePassword() {
   var length = window.prompt("Select a number between 8 and 128. This will be the number of characters for your password.")
 
   //We need an error message if they don't select a number between 8 and 128.
@@ -25,10 +25,8 @@ function passwordLength() {
     var length = window.prompt("Select a number between 8 and 128. This will be the number of characters for your password.")
   }
   else {
-    window.alert("You have chosen a password of " + length + " characters. Good job buddy.");
+    window.alert("You have chosen a password of " + length + " characters.");
   }
-}
-passwordLength()
 
 //creating variables to hold value of window.confirm ok/cancel
 var confirmUpper = window.confirm("Would you like uppercase letters to be included in your password?"); 
@@ -50,7 +48,7 @@ var firstPassword = []
   if (confirmSpecial) {
     firstPassword = firstPassword.concast(special)
   }
-
+}
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
