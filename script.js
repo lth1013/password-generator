@@ -10,6 +10,25 @@ var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var special = ['"', "!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "`", "{", "|", "}", "~"];
 
+//User chooses how long they want their password to be
+
+function passwordLength() {
+  var length = window.prompt("Select a number between 8 and 128. This will be the number of characters for your password.")
+
+  //We need an error message if they don't select a number between 8 and 128.
+  if (length < 8) {
+    window.alert("You did not select a number that fits the criteria. Please reselect.");
+    var length = window.prompt("Select a number between 8 and 128. This will be the number of characters for your password.")
+  }
+  else if (length > 128) {
+    window.alert("You did not select a number that fits the criteria. Please reselect.");
+    var length = window.prompt("Select a number between 8 and 128. This will be the number of characters for your password.")
+  }
+  else {
+    window.alert("You have chosen a password of " + length + " characters. Good job buddy.");
+  }
+}
+passwordLength()
 
 
 // Write password to the #password input
